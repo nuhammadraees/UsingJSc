@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<style>
+#header1 {
+    background-color:#69ADCF;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+#footer1 {
+    background-color:#69ADCF;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+</style>
+    <style type="text/css">
+      #google_map {width: 550px; height: 450px;margin-top:50px;margin-left:auto;margin-right:auto;}
+    </style>
+    <script type="text/javascript"
+     src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDajeTAHAafWESv3Qzm805zley8z6Y9w-4&sensor=false">
+    </script>
+    <script type="text/javascript">
+
+
+var mapIsb=new google.maps.LatLng(33.6566398,73.0165118);
+var mapKhr=new google.maps.LatLng(24.8635045,67.2173113);
+var mapLhr=new google.maps.LatLng(31.4810656,74.3047827);
+var mapPwr=new google.maps.LatLng(33.980465,71.427183); //Google map Coordinates
+      var map
+      function initialize() //function initializes Google map
+      {
+        var googleMapOptions =
+        {
+            center: mapIsb, // map center
+            zoom: 15, //zoom level, 0 = earth view to higher value
+            panControl: true, //enable pan Control
+            zoomControl: true, //enable zoom control
+            zoomControlOptions: {
+                style: google.maps.ZoomControlStyle.SMALL //zoom control size
+             },
+            scaleControl: true, // enable scale control
+            mapTypeId: google.maps.MapTypeId.ROADMAP // google map type
+        };
+        map = new google.maps.Map(document.getElementById("google_map"), googleMapOptions);
+      }
+
+        function addIsbMarker() { //function that will add markers on button click
+            var marker = new google.maps.Marker({
+                position:mapIsb,
+                map: map,
+                  draggable:true,
+                  animation: google.maps.Animation.DROP,
+                title:"This a new marker!",
+              icon: "http://maps.google.com/mapfiles/ms/micons/blue.png"
+            });
+        }
+
+        function addKhrMarker() { //function that will add markers on button click
+            var marker = new google.maps.Marker({
+                position:mapKhr,
+                map: map,
+                  draggable:true,
+                  animation: google.maps.Animation.DROP,
+                title:"This a new marker!",
+              icon: "http://maps.google.com/mapfiles/ms/micons/blue.png"
+            });
+        }
+
+        function addLhrMarker() { //function that will add markers on button click
+            var marker = new google.maps.Marker({
+                position:mapLhr,
+                map: map,
+                  draggable:true,
+                  animation: google.maps.Animation.DROP,
+                title:"This a new marker!",
+              icon: "http://maps.google.com/mapfiles/ms/micons/blue.png"
+            });
+        }
+
+        function addPwrMarker() { //function that will add markers on button click
+            var marker = new google.maps.Marker({
+                position:mapPwr,
+                map: map,
+                  draggable:true,
+                  animation: google.maps.Animation.DROP,
+                title:"This a new marker!",
+              icon: "http://maps.google.com/mapfiles/ms/micons/blue.png"
+            });
+        }
+    </script>
+
+	
+	<!-- Include meta tag to ensure proper rendering and touch zooming -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	
+	<!-- Include the jQuery library -->
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	
+	<!-- Include the jQuery Mobile library -->
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	
+	
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+	<style>
+		img {
+		display: inline-block;
+		}
+	</style>
+	
+	<title>Schoool APPPP</title>
+<head>
+<body onLoad="initialize()">
+	<div data-role="page" id="page">
+		<div data-role="header" id="header1">
+			<h1><img src="logo.png" align="left" height="50px" width="50px">National University of Computer Emerging Sciences</h1>
+		</div>
+		<div data-role="ui-content">
+			<div data-role="main" class="ui-content">
+				<div data-role="collapsible">
+					<h1>Campuses</h1>
+					<ul data-role="listview">
+						<li><a href="#pageIsb">Islamabad</a></li>
+						<li><a href="#pageKhr">Karachi</a></li>
+						<li><a href="#pagePwr">Peshawar</a></li>
+						<li><a href="#pageLhr">Lahore</a></li>
+					</ul>
+				</div>
+				<div data-role="collapsible">
+						<h1>Admissions</h1>
+						<p>Fast nu addmision will be start from 25 febraury 2015. thank u. </p>
+				</div>
+				<div data-role="collapsible">
+					<h1>Departments</h1>
+					<ul data-role="listview">
+						<li><a href="#pageCs">Computer Science</a></li>
+						<li><a href="#pageEE">Electrical Engineering</a></li>
+						<li><a href="#pageMG">Management</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" id="footer1">
+			<h4>All rights reserved</h4>
+		</div>
+	</div>
+	
+	<div data-role="page" id="pageIsb">
+		<div data-role="header" id="header1">
+			
+			<a href="#page" class="ui-btnui-icon-home ui-btn-icon-left">Home</a>
+			<h1><img src="logo.png" align="left" height="50px" width="50px">National University of Computer Emerging Sciences</h1>
+		</div>
+		<div data-role="ui-content">
+			<p align="center">Islamabad</p>
+			
+			<div id="google_map" ></div><button id="drop" onClick="addIsbMarker()">Islamabad</button>
+		</div>
+		<div data-role="footer" id="footer1">
+			<h4>All rights reserved</h4>
+		</div>
+	</div>		
+	
+	<div data-role="page" id="pageKhr">
+		<div data-role="header" id="header1">
+			
+			<a href="#page" class="ui-btnui-icon-home ui-btn-icon-left">Home</a>
+			<h1><img src="logo.png" align="left" height="50px" width="50px">National University of Computer Emerging Sciences</h1>
+		</div>
+		<div data-role="ui-content">
+			<p align="center">Karachi</p>
+			 <div id="google_map" ></div><button id="drop" onClick="addIsbMarker()">Islamabad</button>
+		</div>
+		<div data-role="footer" id="footer1">
+			<h4>All rights reserved</h4>
+		</div>
+	</div>
+
+		<div data-role="page" id="pageLhr">
+		<div data-role="header" id="header1">
+			
+			<a href="#page" class="ui-btnui-icon-home ui-btn-icon-left">Home</a>
+			<h1><img src="logo.png" align="left" height="50px" width="50px">National University of Computer Emerging Sciences</h1>
+		</div>
+			<div data-role="ui-content">
+				<p align="center">Lahore</p>
+				<div id="google_map" ></div><button id="drop" onClick="addIsbMarker()">Islamabad</button>
+			</div>
+		<div data-role="footer" id="footer1">
+			<h4>All rights reserved</h4>
+		</div>
+	</div>
+
+		<div data-role="page" id="pagePwr">
+		<div data-role="header" id="header1">
+			
+			<a href="#page" class="ui-btnui-icon-home ui-btn-icon-left">Home</a>
+			<h1><img src="logo.png" align="left" height="50px" width="50px">National University of Computer Emerging Sciences</h1>
+		</div>
+			<div data-role="ui-content">
+				<p align="center">Peshawar</p>
+				<div id="google_map" ></div><button id="drop" onClick="addIsbMarker()">Islamabad</button>
+			</div>
+		<div data-role="footer" id="footer1">
+			<h4>All rights reserved</h4>
+		</div>
+	</div>
+	<div data-role="page" id="pageCs">
+		<div data-role="header" id="header1">
+			
+			<a href="#page" class="ui-btnui-icon-home ui-btn-icon-left">Home</a>
+			<h1><img src="logo.png" align="left" height="50px" width="50px">National University of Computer Emerging Sciences</h1>
+		</div>
+		
+		<div data-role="main" class="ui-content">
+				<h2>Computer Science</h2>
+					<div data-role="collapsible">
+						<h4>BS</h4>
+						<p>this is my computer science field</p>
+					</div>
+
+					<div data-role="collapsible">
+						<h4>MS</h4>
+						<p>this is fast ms field</p>
+					</div>
+
+					<div data-role="collapsible">
+						<h4>PhD</h4>
+						<p>this is doctor level phd field</p>					
+					</div>
+		</div>
+			
+		<div data-role="footer" id="footer1">
+			<h4>All rights reserved</h4>
+		</div>
+	</div>
+		<div data-role="page" id="pageEE">
+		<div data-role="header" id="header1">
+		
+			<a href="#page" class="ui-btnui-icon-home ui-btn-icon-left">Home</a>
+			<h1><img src="logo.png" align="left" height="50px" width="50px">National University of Computer Emerging Sciences</h1>
+		</div>
+		
+		<div data-role="main" class="ui-content">
+				<h2>Computer Science</h2>
+					<div data-role="collapsible">
+						<h4>BS</h4>
+						<p>this is my computer science field</p>
+					</div>
+
+					<div data-role="collapsible">
+						<h4>MS</h4>
+						<p>this is fast ms field</p>
+					</div>
+
+					<div data-role="collapsible">
+						<h4>PhD</h4>
+						<p>this is doctor level phd field</p>					
+					</div>
+		</div>
+			
+		<div data-role="footer" id="footer1">
+			<h4>All rights reserved</h4>
+		</div>
+	</div>
+	
+		<div data-role="page" id="pageMG">
+		<div data-role="header" id="header1">
+			
+			<a href="#page" class="ui-btnui-icon-home ui-btn-icon-left">Home</a>
+			<h1><img src="logo.png" align="left" height="50px" width="50px">National University of Computer Emerging Sciences</h1>
+		</div>
+		
+		<div data-role="main" class="ui-content">
+				<h2>Computer Science</h2>
+					<div data-role="collapsible">
+						<h4>BS</h4>
+						<p>this is my computer science field</p>
+					</div>
+
+					<div data-role="collapsible">
+						<h4>MS</h4>
+						<p>this is fast ms field</p>
+					</div>
+
+					<div data-role="collapsible">
+						<h4>PhD</h4>
+						<p>this is doctor level phd field</p>					
+					</div>
+		</div>
+			
+		<div data-role="footer" id="footer1">
+			<h4>All rights reserved</h4>
+		</div>
+	</div>
+	
+</body>
+</html>
+
+
+
+
